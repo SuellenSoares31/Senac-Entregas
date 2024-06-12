@@ -9,7 +9,7 @@ function cadastrar() {
 	let nome= prompt("Qual seu nome?")
 	let idade= prompt("Qual sua idade?")
 	let peso= prompt("Qual seu peso?")
-	let tiposanguíneo= prompt("Qual seu tipo Sanguíno?")
+	let tiposanguíneo= prompt("Qual seu tipo sanguíneo?")
 	let ultimadoacao= prompt("Qual foi sua ultima doacao?")
 	
  
@@ -32,13 +32,36 @@ function cadastrar() {
 
 // Função para listar
 function listar() {
-	console.log("Função de lista")
+	for(let dado of dados){
+		console.log(dado.nome)
+	}
+	
+	 
+
 }
+
 
 
 // Função para buscar
 function buscar() {
-	console.log("Função de busca")
+	console.log("Buscar doadores")
+
+	const buscar= prompt("Qual seu tipo sanguíneo?")
+
+	for (let i = 0; i< dados.length; i ++){
+		
+		const item = dados [i]
+
+		if (item.sangue === buscar){
+			console.log(`$ { i + 1} | $ {item.nome} | $ {item.nascimento} |  $ {item.peso} |  $ {item.sangue} |  $ {item.doacao}`)
+		}
+		
+	
+
+
+		
+	}
+	
 }
 
 

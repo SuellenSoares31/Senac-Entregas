@@ -31,13 +31,28 @@ function cadastrar() {
 
 // Função para listar
 function listar() {
-	console.log("Função de lista")
+
+for(let dado of dados){
+		console.log(dado.nome)
+	}
+	
 }
 
 
 // Função para buscar
 function buscar() {
-	console.log("Função de busca")
+	console.log("Buscar abrigos")
+
+	const buscar= prompt ("Qual seu nome")
+	
+	for (let i = 0; i < dados.length; i++){
+	
+		const item = dados [i]
+
+		if ( item.nome === buscar){
+			console.log (`$ { i + 1} | $ {item.nome} | $ {item.endereco} |  $ {item.telefone} |  $ {item.capacidade} |  $ {item.cidade}`)
+		}
+	}
 }
 
 
